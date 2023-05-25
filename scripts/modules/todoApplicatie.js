@@ -28,6 +28,7 @@ export default class TodoApplicatie {
     const todoInputfield = document.getElementById("addTodo");
     if (todoInputfield.value != null && todoInputfield.value != "") {
       this.#todoRepository.addTodo(todoInputfield.value);
+      todoInputfield.value = null;
       this.toHTML();
     }
   }
